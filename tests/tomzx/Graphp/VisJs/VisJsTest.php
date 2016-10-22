@@ -68,7 +68,7 @@ var nodes = [
 {"id":"a","label":"a"},
 {"id":"b\u00b9\u00b2\u00b3 is; ok\\\\ay, \"right\"?","label":"b\u00b9\u00b2\u00b3 is; ok\\\\ay, \"right\"?"},
 {"id":3,"label":3},
-{"id":4,"label":4}
+{"id":4,"label":4,"graphviz.label":"normal"}
 ];
 var edges = [
 
