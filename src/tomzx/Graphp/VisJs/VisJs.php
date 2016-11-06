@@ -19,7 +19,6 @@ class VisJs implements ExporterInterface
 		foreach ($graph->getVertices() as $vertex) {
 			$data = [
 				'id'    => $vertex->getId(),
-				'label' => $vertex->getAttribute('label') !== null ? $vertex->getAttribute('label') : $vertex->getId(),
 			];
 
 			$vertexAttribute = $vertex->getAttributeBag()->getAttributes();
