@@ -44,8 +44,8 @@ GRAPH;
         $graph->createVertex('b');
         $expected = <<<GRAPH
 var nodes = [
-{"id":"a","label":"a"},
-{"id":"b","label":"b"}
+{"id":"a"},
+{"id":"b"}
 ];
 var edges = [
 
@@ -65,10 +65,10 @@ GRAPH;
         $graph->createVertex(4)->setAttribute('graphviz.label', 'normal');
         $expected = <<<GRAPH
 var nodes = [
-{"id":"a","label":"a"},
-{"id":"b\u00b9\u00b2\u00b3 is; ok\\\\ay, \"right\"?","label":"b\u00b9\u00b2\u00b3 is; ok\\\\ay, \"right\"?"},
-{"id":3,"label":3},
-{"id":4,"label":4,"graphviz.label":"normal"}
+{"id":"a"},
+{"id":"b\u00b9\u00b2\u00b3 is; ok\\\\ay, \"right\"?"},
+{"id":3},
+{"id":4,"graphviz.label":"normal"}
 ];
 var edges = [
 
@@ -85,8 +85,8 @@ GRAPH;
         $graph->createVertex('a')->createEdgeTo($graph->createVertex('b'));
         $expected = <<<GRAPH
 var nodes = [
-{"id":"a","label":"a"},
-{"id":"b","label":"b"}
+{"id":"a"},
+{"id":"b"}
 ];
 var edges = [
 {"from":"a","to":"b","arrows":"to"}
@@ -105,9 +105,9 @@ GRAPH;
         $graph->createVertex('c')->createEdge($graph->getVertex('b'));
         $expected = <<<GRAPH
 var nodes = [
-{"id":"a","label":"a"},
-{"id":"b","label":"b"},
-{"id":"c","label":"c"}
+{"id":"a"},
+{"id":"b"},
+{"id":"c"}
 ];
 var edges = [
 {"from":"a","to":"b","arrows":"to"},
@@ -128,10 +128,10 @@ GRAPH;
         $graph->getVertex('b')->createEdge($graph->getVertex('c'));
         $expected = <<<GRAPH
 var nodes = [
-{"id":"a","label":"a"},
-{"id":"b","label":"b"},
-{"id":"c","label":"c"},
-{"id":"d","label":"d"}
+{"id":"a"},
+{"id":"b"},
+{"id":"c"},
+{"id":"d"}
 ];
 var edges = [
 {"from":"a","to":"b"},
